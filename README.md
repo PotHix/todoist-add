@@ -48,7 +48,7 @@ you have to specify the FFI feature:
 If you want to test the java example, you have to compile the code with support
 to JNI:
 
-        cargo build --release --features=jni
+        cargo build --release --features=java
 
 With JNI enabled, you have to generate the header files and compile the java
 program:
