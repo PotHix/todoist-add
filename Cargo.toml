@@ -16,7 +16,7 @@ jni = { version = "0.18.0", optional = true }
 
 [features]
 all = ["jni", "ffi"]
-jni = ["jni"]
+java = ["jni"]
 ffi = []
 
 [profile.release]
