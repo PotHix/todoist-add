@@ -18,6 +18,7 @@ neon = { version = "0.5", optional = true }
 [features]
 java = ["jni"]
 javascript = ["neon"]
+ffi = []
 
 [build-dependencies]
 neon-build = "0.5"
