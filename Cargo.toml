@@ -16,6 +16,7 @@ jni = { version = "0.18.0", optional = true }
 neon = { version = "0.5", optional = true }
 
 [features]
+all = ["jni", "neon"]
 java = ["jni"]
 javascript = ["neon"]
 ffi = []

@@ -26,6 +26,16 @@ you just want to use the library for other **Rust projects**.
 
         cargo build --release
 
+### All features
+
+If you want to have all features compiled, you can rely on the `all` feature
+when compiling:
+
+        cargo build --release --features=all
+
+It contains all the features listed above and has a bigger binary because of
+that.
+
 ### FFI (for Ruby)
 
 If you want to use the FFI interface to test examples like the one for Ruby,
@@ -46,7 +56,7 @@ program:
         javac -h . examples/Todoist.java
         cd examples
         javac Todoist.java
-        LD_LIBRARY_PATH=/path/to/todoist-add/target/release java Todoist
+        LD_LIBRARY_PATH=/full/path/to/todoist-add/target/release java Todoist
 
 The `LD_LIBRARY_PATH` considers that you're using a Linux system. If you're
 using something else, you will have to specify the path for the `libtbdoist`

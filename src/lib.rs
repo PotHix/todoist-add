@@ -1,7 +1,7 @@
-#[cfg(feature = "ffi")]
+#[cfg(any(feature = "ffi", feature = "all"))]
 mod ffi;
 
-#[cfg(feature = "jni")]
+#[cfg(any(feature = "jni", feature = "all"))]
 mod java;
 
 const URL: &'static str = "https://api.todoist.com";
