@@ -1,0 +1,23 @@
+[package]
+name = "todoist-add"
+version = "0.1.0"
+authors = ["PotHix <pothix@pothix.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["lib", "cdylib"]
+
+[dependencies]
+reqwest = { version = "0.10", features = ["json", "blocking"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = { version = "1.0" }
+structopt = { version = "0.3" }
+jni = { version = "0.18.0", optional = true }
+neon = { version = "0.5", optional = true }
+
+[features]
+java = ["jni"]
+javascript = ["neon"]
+
+[build-dependencies]
+neon-build = "0.5"
