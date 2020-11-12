@@ -15,10 +15,7 @@ struct Opt {
 
 #[derive(Debug, StructOpt)]
 enum Command {
-    Add {
-        #[structopt(short = "q")]
-        content: String,
-    },
+    Add { content: String },
 }
 
 fn main() {
