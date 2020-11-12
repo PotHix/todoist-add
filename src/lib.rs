@@ -25,11 +25,3 @@ pub fn add(token: String, content: String) -> Result<String, Box<dyn std::error:
 
     return Ok(res.text().unwrap());
 }
-
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        assert_eq!(2 + 2, 4);
-    }
-}
