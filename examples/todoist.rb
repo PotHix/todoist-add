@@ -4,7 +4,7 @@ module Todoist
   extend FFI::Library
   lib_name = "libtodoist_add.#{::FFI::Platform::LIBSUFFIX}"
 
-  ffi_lib "#{File.expand_path(File.dirname(__FILE__))}/../target/debug/#{lib_name}"
+  ffi_lib "#{File.expand_path(File.dirname(__FILE__))}/../release/debug/#{lib_name}"
 
   attach_function :add, [:string, :string], :string
   attach_function :string_free, [:string], :void

@@ -18,3 +18,11 @@ jni = { version = "0.18.0", optional = true }
 all = ["jni", "ffi"]
 jni = ["jni"]
 ffi = []
+
+[profile.release]
+# optimizing for binary size here
+# for more info: https://github.com/johnthagen/min-sized-rust
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = 'abort'
