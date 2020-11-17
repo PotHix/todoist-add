@@ -43,6 +43,11 @@ you have to specify the FFI feature:
 
         cargo build --release --features=ffi
 
+To be sure it works, you can try the ruby example. Be sure you have the `ffi`
+gem installed (`gem install ffi`) and run:
+
+        ruby examples/todoist.rb
+
 ### JNI
 
 If you want to test the java example, you have to compile the code with support
@@ -53,10 +58,9 @@ to JNI:
 With JNI enabled, you have to generate the header files and compile the java
 program:
 
-        javac -h . examples/Todoist.java
-        cd examples
-        javac Todoist.java
-        LD_LIBRARY_PATH=/full/path/to/todoist-add/target/release java Todoist
+        javac -h examples examples/Todoist.java
+        javac examples/Todoist.java
+        LD_LIBRARY_PATH=$PWD/target/release java -cp examples Todoist
 
 The `LD_LIBRARY_PATH` considers that you're using a Linux system. If you're
 using something else, you will have to specify the path for the `libtbdoist`
