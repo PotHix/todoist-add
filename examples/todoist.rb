@@ -10,6 +10,6 @@ module Todoist
   attach_function :string_free, [:string], :void
 end
 
-result = Todoist.add(ENV["token"] || "", "New task added from Ruby")
+result = Todoist.add(ENV["token"] || "", "New task added via Ruby")
 puts result
 Todoist.string_free(result)
